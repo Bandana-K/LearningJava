@@ -5,6 +5,9 @@ import java.util.List;
 import java.util.concurrent.ForkJoinPool;
 
 public class DriverClass {
+	
+	//this sample project creates a list of 1000 numbers and calculates its square by using  forkAndJoin  pool
+	//test the performance with various size of list and various values for threshHold limit in recurrsiveTask
 
 	public static void main(String[] args) {
 
