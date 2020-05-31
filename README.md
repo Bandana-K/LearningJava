@@ -1,7 +1,7 @@
 # LearningJava
-This Repository contains the sample code for following topics:
+*This Repository contains the sample code for following topics:*
 
-MultiThreading:
+## MultiThreading:
   1. ThreadLocal sample
   2. Deadlock sample
   3. creating your own custom ThreadPool
@@ -9,10 +9,10 @@ MultiThreading:
   5. Race Simulation
   6. Fork-Join pool
 
-Collections:
+## Collections:
   1. ConcurrentModification Exception in collections
   2. Sort by value for HashMaps
 
-Errors & Exceptions:
+## Errors & Exceptions:
   1. NoClassDefFoundError example
   2. Output for various try-catch-finally permutations
