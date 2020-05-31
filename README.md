@@ -12,3 +12,7 @@ MultiThreading:
 Collections:
   1. ConcurrentModification Exception in collections
   2. Sort by value for HashMaps
+
+Errors & Exceptions:
+  1. NoClassDefFoundError example
+  2. Output for various try-catch-finally permutations
