@@ -8,6 +8,7 @@
   4. Publish subscriber code with all sort of cases 
   5. Race Simulation
   6. Fork-Join pool
+  7. AtomicIntegers
 
 ## Collections:
   1. ConcurrentModification Exception in collections
