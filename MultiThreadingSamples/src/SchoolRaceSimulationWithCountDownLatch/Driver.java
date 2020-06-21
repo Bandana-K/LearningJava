@@ -18,7 +18,7 @@ public class Driver {
 		}
 		
 		Thread.sleep(1000);
-		System.out.println("All participants are in position, lets start the race.");
+		System.out.println("On your marks, \nGet... \nSet... \nGo !!!");
 		latch.countDown();
 	}
 	
