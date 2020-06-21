@@ -4,6 +4,7 @@
 ## MultiThreading:
   1. ThreadLocal sample
   2. Deadlock sample
+  3. Interthread communication with wait/notify
   3. Creating your own custom ThreadPool
   4. Publish subscriber code with all sort of cases 
   5. Race Simulation
