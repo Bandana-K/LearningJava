@@ -3,7 +3,7 @@ package PrintOddEvenInSequenceUsingTwoThreads;
 public class Counter {
 	
 	private int end;
-	private int currentCount;
+	volatile private int currentCount;
 	
 	Counter(int start, int end){
 		this.currentCount = start;

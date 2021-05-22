@@ -18,12 +18,19 @@ public class VarVariables {
 //		while creating a list the type is inferred based on the left side type, exp :
 //		List<String> list = new ArrayList<>();
 //		but if we don't define the  type and use var for it, then the arraylist is created for the superType :  OBJECT
+//		However below code will lead to the same issues as was before generics,  while getting the items out of the list, we need to do typecasting else will get classCastException
+		
 		var objectList  = new ArrayList<>();
 		objectList.add(1);
 		objectList.add("Hello");
 		objectList.add(false);
 		
 		System.out.println(objectList);
+
+		
+//		int i = (int) objectList.get(1);
+//		System.out.println(i);
+		
 		
 //		best use of var is to make sure when there are big variable names, we can reduce boilerPlate, by creating it as var
 //		we should decide the tradesOffs between :

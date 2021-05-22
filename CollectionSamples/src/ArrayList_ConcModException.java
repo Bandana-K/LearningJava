@@ -15,13 +15,13 @@ public class ArrayList_ConcModException {
 //		Sample1:
 //		the below code will never throw any exception. The reason is we are iterating over the loop using normal variable i, We are not using iterator.next() anywhere, which is responsible
 //		for checking concurrent modification and throwing it.
-		System.out.println(list);
-		for (int i = 0; i < list.size(); i++) {
-			String word = list.get(i);
-			if (word.equals("HOW"))
-				list.remove(word);
-		}
-		System.out.println(list);
+//		System.out.println(list + "size = "+ list.size());
+//		for (int i = 0; i < list.size(); i++) { //use the list.size() instead of the hardCoded value 5, else it will throw IndexOutOfBoundException
+//			String word = list.get(i);
+//			if (word.equals("HOW"))
+//				list.remove(word);
+//		}
+//		System.out.println(list+ "size = "+ list.size());
 
 
 //		Sample2:
@@ -45,13 +45,14 @@ public class ArrayList_ConcModException {
 //		when it tries to go to next element, itr.next() gets called and the very first line checks for the concurrentModification, which is true, so throws the exception
 //		However in case of last-1 element deletion, when the list adjusts its size,for it hasNext() will return no other element, so next() never gets called hence, no exception
 //		Also that's the reason in the below code when "HOW" is deleted, the for loop is not executed for the next element "WHAT"
-//		System.out.println(list);
-//		for (String word : list) {
-//			if (word.equals("HOW"))
-//				list.remove(word);
-//			else 
-//				System.out.println(word);
-//		}
+		System.out.println(list);
+		for (String word : list) {
+			if (word.equals("HOW"))
+				list.remove(word);
+			else 
+				System.out.println(word);
+		}
+		System.out.println(list);
 
 		
 //		Sample4:

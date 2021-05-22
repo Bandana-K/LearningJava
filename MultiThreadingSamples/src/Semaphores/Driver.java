@@ -44,8 +44,6 @@ import java.util.concurrent.TimeUnit;
  * <a href="https://www.udemy.com/java-multithreading/?couponCode=FREE">
  *     <em>https://www.udemy.com/java-multithreading/?couponCode=FREE</em>
  * </a>
- *
- * @author Z.B. Celik <celik.berkay@gmail.com>
  */
 public class Driver {
 
