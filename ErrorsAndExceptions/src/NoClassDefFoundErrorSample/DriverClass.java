@@ -3,9 +3,9 @@ package NoClassDefFoundErrorSample;
 public class DriverClass {
 
 //	Exception in thread "main" java.lang.ExceptionInInitializerError
-//	at NoClassDefFoundErrorSample.DriverClass.main(DriverClass.java:18)
+//	at NoClassDefFoundErrorSample.DriverClass.main(DriverClass.java:19)
 //	Caused by: java.lang.ArithmeticException: / by zero
-//	at NoClassDefFoundErrorSample.StaticTest.<clinit>(StaticTest.java:10)
+//	at NoClassDefFoundErrorSample.ErroringClass.<clinit>(ErroringClass.java:10)
 //	... 1 more
 	
 	//At compile time there is no issue, however when we run the app
@@ -16,6 +16,6 @@ public class DriverClass {
 	//coz all the static blocks and  methods are ran/loaded at the time of classLoading
 
 	public static void main(String[] args) {
-		new StaticTest().print();
+		new ErroringClass().print();
 	}
 }
