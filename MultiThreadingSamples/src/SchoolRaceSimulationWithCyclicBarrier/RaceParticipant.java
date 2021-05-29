@@ -1,15 +1,16 @@
-package SchoolRaceSimulationWithCountDownLatch;
+package SchoolRaceSimulationWithCyclicBarrier;
 
-import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.CyclicBarrier;
 
 public class RaceParticipant extends Thread {
 	
 	private String name;
-	private CountDownLatch latch;
+	private CyclicBarrier barrier;
 	
-	RaceParticipant(String name, CountDownLatch latch){
+	RaceParticipant(String name, CyclicBarrier barrier){
 		this.name = name;
-		this.latch = latch;
+		this.barrier = barrier;
 	}
 	
 	public void run() {
@@ -17,8 +18,8 @@ public class RaceParticipant extends Thread {
 		System.out.println("participant "+ name + " in position");
 		
 		try {
-			latch.await();
-		} catch (InterruptedException e) {
+			barrier.await();
+		} catch (InterruptedException | BrokenBarrierException e) {
 			System.err.println("Exception occured  "  + e.getMessage());
 		}
 		

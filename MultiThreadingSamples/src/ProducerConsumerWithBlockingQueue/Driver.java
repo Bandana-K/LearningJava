@@ -20,6 +20,7 @@ public class Driver {
 		for(int i = 0; i< noOfProducers ; i++) {
 			Producer prodcer = new Producer("Producer "+i, queue, queueSize);
 			executor.submit(prodcer);
+			//executor.execute(prodcer);
 		}
 
 		Thread.sleep(10);

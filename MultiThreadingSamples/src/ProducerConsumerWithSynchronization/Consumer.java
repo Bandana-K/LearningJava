@@ -6,15 +6,15 @@ public class Consumer extends Thread {
 
 	private Queue<Integer> queue;
 
-	Consumer(Queue<Integer> queue, int size) {
+	Consumer(Queue<Integer> queue) {
 		this.queue = queue;
 	}
 
 	public void run() {
-
+		
 		try {
 			System.out.println("Consumer is up and running");
-			Thread.sleep(1000);
+			Thread.sleep(5000);
 
 			while (true) {
 				synchronized (queue) {
@@ -26,7 +26,9 @@ public class Consumer extends Thread {
 
 					int i = queue.remove();
 					System.out.println(" Consumer has consumed the message : " + i);
+					
 					queue.notifyAll();
+					Thread.sleep(1000);
 
 				}
 			}

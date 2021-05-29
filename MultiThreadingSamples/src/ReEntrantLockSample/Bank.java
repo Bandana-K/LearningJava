@@ -6,7 +6,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class Bank {
 	
-	   private Account acc1 = new Account();
+	    private Account acc1 = new Account();
 	    private Account acc2 = new Account();
 	    private Lock lock1 = new ReentrantLock();
 	    private Lock lock2 = new ReentrantLock();
@@ -56,7 +56,7 @@ public class Bank {
 	    public void transferFrom2to1() throws InterruptedException {
 	        Random random = new Random();
 	        for (int i = 0; i < 10000; i++) {
-	            acquireLocks(lock2, lock1);
+	            acquireLocks(lock1, lock2);
 	            try {
 	                Account.transfer(acc2, acc1, random.nextInt(100));
 	            } finally {
@@ -66,8 +66,7 @@ public class Bank {
 	        }
 	    }
 
-	    //When both threads finish execution, finished runs
-	    public void finished() {
+	    public void printBalanceForBoth() {
 	        System.out.println("Account 1 balance: " + acc1.getBalance());
 	        System.out.println("Account 2 balance: " + acc2.getBalance());
 	        System.out.println("Total balance: " + (acc1.getBalance() + acc2.getBalance()));

@@ -38,6 +38,8 @@ public class Producer extends Thread {
 
 					queue.notifyAll();
 				}
+				
+				Thread.sleep(1000);
 			}
 		} catch (InterruptedException e) {
 			System.out.println(name + "is interrupted");

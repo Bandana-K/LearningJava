@@ -1,16 +1,17 @@
-package InterThreadCommunication;
+package InterThreadCommunicationLockObject;
+
 
 public class Driver {
 
 	public static void main(String[] args) {
 
-		Processor processor = new Processor();
+		ResourceLockProcessor resourceLockProcessor = new ResourceLockProcessor();
 		
 		Thread producer = new Thread( new Runnable() {			
 			@Override
 			public void run() {
 				try {
-					processor.produce();
+					resourceLockProcessor.produce();
 				} catch (InterruptedException e) {
 					System.out.println("producer interrupted");
 				}
@@ -22,7 +23,7 @@ public class Driver {
 			@Override
 			public void run() {
 				try {
-					processor.consume();
+					resourceLockProcessor.consume();
 				} catch (InterruptedException e) {
 					System.out.println("consumer interrupted");
 				}
@@ -31,7 +32,6 @@ public class Driver {
 		
 		consumer.start();
 		producer.start();
-		
 	}
 
 }

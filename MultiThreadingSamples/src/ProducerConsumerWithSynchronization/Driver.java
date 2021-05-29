@@ -13,7 +13,7 @@ public class Driver {
 		int size = 3;
 		Queue<Integer> queue = new LinkedList<Integer>();
 		
-		Consumer consumer = new Consumer(queue, size);
+		Consumer consumer = new Consumer(queue);
 		consumer.start();
 		
 		ExecutorService executor = Executors.newFixedThreadPool(noOfProducers);

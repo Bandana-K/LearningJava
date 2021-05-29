@@ -13,7 +13,7 @@ public class DriverClass {
 
 		List<Integer> list = new  ArrayList<>();
 		for(int i=1; i<=1000; i++) {
-			list.add(i-1, i);
+			list.add(i);
 		}
 		
 		System.out.println("list : " + list);
