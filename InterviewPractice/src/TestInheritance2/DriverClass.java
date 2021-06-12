@@ -13,6 +13,10 @@ public class DriverClass {
 		//to this object, as it has refernce to Parent class, it has no visibility of printValue. Hence only method  left to call is print()
 		childObjWithParentRef.print(); 
 		
+		System.out.println(childObj.value);
+		System.out.println(childObjWithParentRef.value);
+
+		
 	}
 
 }

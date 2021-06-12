@@ -66,6 +66,13 @@ public class ArrayList_ConcModException {
 //				System.out.println(word);
 //		}
 //		System.out.println(list);
+		
+		Stack<Integer> stack = new Stack<>();
+		stack.push(2);
+		stack.push(4);
+		stack.push(9);
+		
+		System.out.println(stack);
 			
 	}
 }
