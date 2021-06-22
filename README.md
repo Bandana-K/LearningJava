@@ -18,3 +18,10 @@
 ## Errors & Exceptions:
   1. NoClassDefFoundError example
   2. Output for various try-catch-finally permutations
+
+## New Features of Java 8 and above:
+  1. Default/static methods in interfaces
+  2. Streams API
+  3. Var keyword
+  
+## Interview questions to find the output:
