@@ -1,0 +1,4 @@
+1. Loadbalancing types -> stickyBased, round robin
+2. OutOfmemory issues, causes and possible fixes ->  in permGen, or can be in heap -> make sure not to have unused string objects a lot, don't hold huge static objects
+3. ThreadPools -> ideal number of threads for a machine having 2 processors
+4. AtomicInteger vs volatile vs normal counters -> how does atomicInteger work internally
