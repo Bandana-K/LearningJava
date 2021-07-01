@@ -1,4 +1,10 @@
-1. Loadbalancing types -> stickyBased, round robin
-2. OutOfmemory issues, causes and possible fixes ->  in permGen, or can be in heap -> make sure not to have unused string objects a lot, don't hold huge static objects
-3. ThreadPools -> ideal number of threads for a machine having 2 processors
-4. AtomicInteger vs volatile vs normal counters -> how does atomicInteger work internally
+Loadbalancing types -> stickyBased, round robin, weighed
+What is the error handling logic -> number of retires, exponential retries
+MQ vs Kafka (Persistence in MQ? what if the server where MQ was running, goes down? Will the messages be lost)
+CAP theorem
+OutOfMemory issues, causes and possible fixes ->  in permGen, or can be in heap -> make sure not to have unused string objects a lot, don't hold huge static objects
+ThreadPools -> ideal number of threads for a machine having 2 processors -> https://engineering.zalando.com/posts/2019/04/how-to-set-an-ideal-thread-pool-size.html
+AtomicInteger vs volatile vs normal counters -> how does atomicInteger work internally
+Various methods of Object class
+Equals and Hashcode contract
+Static methods
