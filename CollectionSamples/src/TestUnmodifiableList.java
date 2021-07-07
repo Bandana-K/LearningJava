@@ -3,8 +3,8 @@ import java.util.Collections;
 import java.util.List;
 
 public class TestUnmodifiableList {
-	
-	public static void main(String args[]) {
+
+	public static void main(String[] args) {
 		
 		String array[] = {"WHEN", "HOW"};
 		
@@ -27,7 +27,6 @@ public class TestUnmodifiableList {
 		
 		System.out.println(testList);
 		System.out.println(immutablelist);
-		
 		
 	}
 
